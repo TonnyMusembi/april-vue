@@ -8,18 +8,16 @@ use App\Models\Order;
 
 class OrderController extends Controller
 {
-    //
 
     public function index()
     {
-
-    //  $order = Order::with('order')->orderby('status')->get();
-    //      return response()->json($order);
+//return all
         return Order::all();
     }
 
     public function store(Request $request)
     {
+        //create new
         $validator = Validator::make($request->all(), [
             'status' => 'required',
             'vehicle_id' => 'required',
@@ -44,6 +42,8 @@ class OrderController extends Controller
         return view('order.create');
     }
     public function destroy(){
+
+        return response()->json(['$data']);
 
     }
 }

@@ -8,8 +8,6 @@ use Illuminate\Http\Request;
 
 class VehicleController extends Controller
 {
-    //
-
     public function index(){
 
         return vehicle::all();
@@ -37,5 +35,8 @@ class VehicleController extends Controller
     {
 
         return view('vehicle.create');
+    }
+    public function drop(){
+
     }
 }

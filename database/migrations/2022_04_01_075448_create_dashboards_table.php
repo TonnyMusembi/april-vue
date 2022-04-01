@@ -15,8 +15,7 @@ class CreateDashboardsTable extends Migration
     {
         Schema::create('dashboards', function (Blueprint $table) {
             $table->id();
-            $table->string('');
-            $table->string('');
+             //$table->string('');
             $table->timestamps();
         });
     }
